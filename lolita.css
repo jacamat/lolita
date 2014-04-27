@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+.lolita {
+  background: #f0eff5;
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  background: #fff;
+  border-right: 2px solid #ebebed;
+  overflow: hidden;
+  overflow-y: auto; 
+  width: 280px;
+}
+
+.recent-thread-item {
+  padding: 20px 10px;
+}
+
+.recent-thread-item + .recent-thread-item {
+  border-top: 1px solid #ebebed;
+}
+
+.recent-thread-item h1 {
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.recent-thread-item p {
+  color: #888;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
