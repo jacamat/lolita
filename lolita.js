@@ -37,14 +37,18 @@ var Lolita = React.createClass({
   render: function() {
     return (
       <div className="lolita">
-        <Sidebar recentThreads={this.state.recentThreads} />
+        <div className="workspace">
+          <Sidebar recentThreads={this.state.recentThreads} />
+        </div>
+        <div className="user-stats">
+        </div>
       </div>
     );
   },
   componentDidMount: function() {
     var self = this;
 
-    $.get('http://localhost:8000/?url=https://platform.quip.com/1/threads/recent?count=50', function(threads) {
+    $.get('http://localhost:8000/?url=https://platform.quip.com/1/threads/recent?count=20', function(threads) {
       self.setState({
         recentThreads: _.sortBy(threads, function(thread) { return thread.thread.updated_usec * -1 })
       });
