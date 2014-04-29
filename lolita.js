@@ -40,7 +40,19 @@ var Lolita = React.createClass({
         <div className="workspace">
           <Sidebar recentThreads={this.state.recentThreads} />
         </div>
+        <div className="carousel">
+          <p>this is a carousel</p>
+        </div>
+        <div className="carousel">
+        <p>this is a carousel</p>
+        </div>
+        <div className="carousel">
+          <p>this is a carousel</p>
+        </div>
         <div className="user-stats">
+          <div className="user-stats-inner">
+            Well, this is hawkward.
+          </div>
         </div>
       </div>
     );
