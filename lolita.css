@@ -13,6 +13,7 @@ html, body {
 .workspace {
   display: flex;
   flex: 1;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -23,15 +24,37 @@ html, body {
   width: 280px;
 }
 
+.board {
+  width: 100%;
+}
+
+.board > div {
+  margin: 50px;
+  max-width: 1280px;
+}
+
 .carousel {
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row /* works with row or column */
-   flex-direction: row;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
+  display: flex;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.carousel-item {
+  height: 350px;
+  min-width: 232px;
+}
+
+.carousel-item img {
+  height: 350px;
+}
+
+.carousel-item + .carousel-item {
+  margin-left: 30px;
+}
+
+.folder-stats {
+  height: 500px;
+  background-color: yellow;
 }
 
 .user-stats {
